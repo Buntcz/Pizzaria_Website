@@ -34,12 +34,18 @@ body {
     border: 1px solid black;
 }
 
+.logoText {
+    position: relative;
+    left: 3rem;
+}
+
 .navbar {
     width: 50%;
     border: 1px solid black;
 }
 
 .links {
+    font-size: 1.4rem;
     list-style-type: none;
     display: flex;
     flex-direction: row;
@@ -47,18 +53,49 @@ body {
     align-items: center;
 }
 
+li {
+    transition: color 300ms ease;
+}
+
+li:hover {
+   color: white;
+}
+
 /* Body part 1 styling*/
 
 .VideoAndText {
     width: 100%;
-    height: 40vh;
+    height: 35vh;
     background-color: #A9A9A9;
     display: flex;
     flex-direction: row;
 }
 
+.playButton {
+    width: 110px;
+    height: 110px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid black;
+    background-color: gray;
+    border-radius: 100%;
+    transition: transform 300ms ease, border 300ms ease,background-color 300ms ease;
+}
+
+.playButton:hover {
+    transform: scale(120%);
+    border: 3px solid white;
+    background-color: purple;
+}
+
+.playText {
+    position: relative;
+    left: 7px;
+}
+
 .text {
-    padding: 3rem;
+    
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -77,8 +114,12 @@ body {
     height: 100vh;
 }
 
+.text1 {
+    width: 15rem;
+}
+
 .text2 {
-    padding: 2.5rem;
+    width: 30rem;
 }
 
 .video {
@@ -94,27 +135,101 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 70%;
-    height: 30vh;
+    width: 80%;
+    height: 25vh;
     border: 2px solid black;
     border-radius: 25px;
-    background-color: white;
+    background-color: #A9A9A9;
 }
-
+/* Cards styling */
 .cardsContainer {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
     width: 100%;
-    height: 30vh;
+    height: 35vh;
     background-color: gray;
     border: 1px solid black;
 
 }
 
 .pizzaCard {
+    background-color: red;
     width: 15%;
     height: 216px;
+    border: 3px solid white;
+    border-radius: 25px;
+    transition: transform 300ms ease;
+}
+
+.pizzaCard:hover {
+    transform: rotate(45deg);
+}
+
+/* CTA and Button styling*/
+
+.CTAcont {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 20vh;
+    background-color: gray;
     border: 1px solid black;
+}
+
+.CTA {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 20vh;
+    border: 1px solid black;
+}
+
+.CTAbutton {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 20vh;
+    border: 1px solid black
+}
+
+.CButton {
+    width: 20rem;
+    height: 100px;
+    border: 3px solid white;
+    border-radius: 25px ;
+    background-color: yellow;
+    transition: background-color 300ms ease, border 300ms ease,transform 300ms ease, font-weight 300ms ease;
+}
+
+.CButton:hover {
+   background-color: orange;
+   border: 3px solid yellow;
+   transform: scale(120%);
+   font-weight: bolder;
+}
+
+/* Footer styling */
+.footer {
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: gray;
+    border: 1px solid black;
+}
+
+/* global styling */
+p {
+    font-size: 1.2rem;
+}
+
+h2 {
+    font-size: 1.7rem;
 }
