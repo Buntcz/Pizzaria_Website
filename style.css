@@ -58,6 +58,7 @@ li {
 }
 
 li:hover {
+    cursor: pointer;
    color: white;
 }
 
@@ -84,6 +85,7 @@ li:hover {
 }
 
 .playButton:hover {
+    cursor: pointer;
     transform: scale(120%);
     border: 3px solid white;
     background-color: purple;
@@ -155,15 +157,21 @@ li:hover {
 }
 
 .pizzaCard {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: red;
     width: 15%;
     height: 216px;
     border: 3px solid white;
     border-radius: 25px;
-    transition: transform 300ms ease;
+    transition: transform 300ms ease, border 300ms ease,background-color 300ms ease;
 }
 
 .pizzaCard:hover {
+    cursor: pointer;
+    background-color: orange;
+    border: 3px solid yellowgreen;
     transform: rotate(45deg);
 }
 
@@ -203,11 +211,12 @@ li:hover {
     height: 100px;
     border: 3px solid white;
     border-radius: 25px ;
-    background-color: yellow;
+    background-color: red;
     transition: background-color 300ms ease, border 300ms ease,transform 300ms ease, font-weight 300ms ease;
 }
 
 .CButton:hover {
+   cursor: pointer;
    background-color: orange;
    border: 3px solid yellow;
    transform: scale(120%);
@@ -223,6 +232,75 @@ li:hover {
     align-items: center;
     background-color: gray;
     border: 1px solid black;
+}
+
+/* First popup styling*/
+.popUp1 {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    position: absolute;
+    width: 600px;
+    height: 400px;
+    border: 3px solid white;
+    background-color: red;
+    border-radius: 25px;
+}
+
+.popUp1.visible {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    position: absolute;
+    width: 600px;
+    height: 400px;
+    border: 3px solid white;
+    background-color: red;
+    border-radius: 25px;
+}
+
+.aboutPara {
+    width: 25rem;
+}
+
+.closePopUp1 {
+    position: relative;
+    left: 5rem;
+    top: 3rem;
+    width: 15rem;
+    height: 50px;
+    border: 3px solid white;
+    border-radius: 25px ;
+    background-color: red;
+    transition: background-color 300ms ease, border 300ms ease,transform 300ms ease, font-weight 300ms ease;
+}
+
+.closePopUp1:hover {
+    cursor: pointer;
+   background-color: orange;
+   border: 3px solid yellow;
+   transform: scale(120%);
+   font-weight: bolder;
+}
+
+.popUp1 {
+    transform: translate(0%, -50%);
+}
+
+.popUp1.visible {
+    transform: translate(0%,0%);
 }
 
 /* global styling */
